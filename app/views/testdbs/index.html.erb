@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Testdbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Text</th>
+      <th>Yes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testdbs.each do |testdb| %>
+      <tr>
+        <td><%= testdb.name %></td>
+        <td><%= testdb.text %></td>
+        <td><%= testdb.yes %></td>
+        <td><%= link_to 'Show', testdb %></td>
+        <td><%= link_to 'Edit', edit_testdb_path(testdb) %></td>
+        <td><%= link_to 'Destroy', testdb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testdb', new_testdb_path %>

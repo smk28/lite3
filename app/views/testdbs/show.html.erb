@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @testdb.name %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @testdb.text %>
+</p>
+
+<p>
+  <strong>Yes:</strong>
+  <%= @testdb.yes %>
+</p>
+
+<%= link_to 'Edit', edit_testdb_path(@testdb) %> |
+<%= link_to 'Back', testdbs_path %>

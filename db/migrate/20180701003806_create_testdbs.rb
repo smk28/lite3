@@ -1,0 +1,11 @@
+class CreateTestdbs < ActiveRecord::Migration[5.2]
+  def change
+    create_table :testdbs do |t|
+      t.string :name
+      t.text :text
+      t.boolean :yes
+
+      t.timestamps
+    end
+  end
+end
